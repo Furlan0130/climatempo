@@ -1,0 +1,169 @@
+.app-container{
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgb(5, 99, 250) 0%, rgb(206, 5, 5) 100%) ;
+}
+.content-wrapper{
+  max-width: 768px;
+  margin: 0 auto;
+}
+header{
+  text-align: center;
+  margin-bottom: 32px;
+}
+header h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 8px;
+}
+header p{
+  color: #dbeafe;
+  font-size: 1.2em;
+}
+.busca-box{
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px ;
+  box-shadow: 0 10px 30px rgb(2, 2, 88);
+}
+.busca-container{
+  display: flex;
+  gap: 8px;
+}
+.busca-container input{
+  flex:1;
+  padding: 12px 16px;
+  border: 1px solid rgb(177, 177, 177);
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.busca-container input:focus{
+  border-color: #fff;
+  box-shadow: 0 0 0 3px black;
+}
+.busca-container button{
+  padding: 12px 24px;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.busca-box button:hover{
+  background: #2563eb;
+}
+.busca-box button:disabled{
+  background: #9ca4af;
+  cursor:not-allowed;
+}
+
+.error-message{
+  margin-top: 16px;
+  padding: 12px;
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  color: #b91c1c;
+  border-radius: 8px;
+}
+
+.card-resultado{
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px #000;
+  padding: 32px;
+}
+
+.info-cidade{
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.nome-cidade{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.desc-cidade{
+  color: #4b5563;
+  text-transform: capitalize;
+  font-size: 1.2em;
+}
+
+.temperatura-box{
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.temperatura-valor{
+  font-size: 3.7em;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 8px;
+
+
+}
+.sens-termica{
+  color: #444;
+}
+
+.detalhes-box{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.detal-item{
+  background: #eee;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center; 
+}
+
+.detal-icone{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.detal-desc{
+  font-size: 0.8em;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.detal-valor{
+  font-weight: bold;
+  color: #222;
+}
+
+
+/* RESPONSIVO SMARTPHONE */
+@media (max-width: 768px){
+  .detalhes-box{
+    grid-template-columns: 1fr;
+  }
+  .temperatura-valor{
+    font-size: 3em;
+  }
+  header h1{
+    font-size: 1.8em;
+  }
+  .busca-container input{
+    width: 80%;
+  }
+}
